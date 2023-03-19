@@ -109,8 +109,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-# "constructionist" is our venv name
-constructionist/
 
 # Spyder project settings
 .spyderproject
