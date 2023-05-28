@@ -20,11 +20,11 @@ For now, rather simplistic:
 * You can simply call it from the terminal as follows:
 
 ```bash
-$ ./constructionist.py
+$ ./bin/constructionist
 ```
 
 In case this doesn't work, you might wanna try the following before running Constructionist:
 
 ```bash
-$ chmod +x constructionist.py
+$ chmod +x ./bin/constructionist
 ```
