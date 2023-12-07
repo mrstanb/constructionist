@@ -1,4 +1,4 @@
-# Constructionist - A Static Site Generator in Python 3.x
+# Constructionist - A Static Site Generator in Python
 
 ## Prerequisites
 Constructionist requires a Python 3.x installation
