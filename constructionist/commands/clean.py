@@ -16,6 +16,8 @@ class Clean(Command):
             return
         public_dir_path = os.path.join(dir, PUBLIC_DIR)
         print(f"Cleaning directory {public_dir_path}")
+        # TODO: When deleting stuff, avoid cleaning sensitive directories and files, such as "/"
+        # Also warn the user if they attempt to delete something sensitive like this
         for root, dirs, files in os.walk(public_dir_path, topdown=False):
             for name in files:
                 os.remove(os.path.join(public_dir_path, name))
