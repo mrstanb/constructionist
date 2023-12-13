@@ -1,4 +1,8 @@
+import os
+
 from ..command import Command
+from ..local_server import serve
+from ..utils import PUBLIC_DIR, has_constructionist_site_layout
 
 class Serve(Command):
     def __init__(self, dir, port):
@@ -6,4 +10,8 @@ class Serve(Command):
         self.port = port
 
     def process(self):
-        print(f'serve {self.dir} {self.port}')
+        if not has_constructionist_site_layout(self.dir):
+            print(f"Directory {dir} doesn't contains a Constructionist site")
+        # TODO: Do some checks on the port range (or maybe enforce constraints for it on the argparse level?)
+        print(f'serve {os.path.join(self.dir, PUBLIC_DIR)} {self.port}')
+        serve(self.dir, self.port)
