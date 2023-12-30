@@ -13,5 +13,5 @@ class Serve(Command):
         if not has_constructionist_site_layout(self.dir):
             print(f"Directory {dir} doesn't contains a Constructionist site")
         # TODO: Do some checks on the port range (or maybe enforce constraints for it on the argparse level?)
-        print(f'serve {os.path.join(self.dir, PUBLIC_DIR)} {self.port}')
+        print(f'Serving content from directory {os.path.join(self.dir, PUBLIC_DIR)} on port {self.port}')
         serve(self.dir, self.port)
